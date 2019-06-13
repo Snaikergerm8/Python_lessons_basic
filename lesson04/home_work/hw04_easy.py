@@ -18,11 +18,8 @@ print(second_list)
 
 first_fruits = ['яблоко','банан','апельсин','персик','груша','айва','мандарин','манго','грейпфрут','лайм']
 second_fruits = ['лайм','персик','хурма','абрикос','кокос','мандарин','банан','арбуз','манго','помело']
-all_fruits = []
+all_fruits = [all_fruits for all_fruits in first_fruits if all_fruits in second_fruits]
 
-for i in first_fruits:
-    if i in second_fruits:
-        all_fruits.append(i)
 print(all_fruits)
 
 # Задание-3:
