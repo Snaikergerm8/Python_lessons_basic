@@ -11,6 +11,7 @@
 # "Невозможно создать/удалить/перейти"
 if __name__ == '__main__':
     import os
+    from hw05_easy import dirList
     def dir_menu(menu):
         heading = "Добро пожаловать в утилиту для работы с папками"
         print(heading.upper().center(200, "*"))
@@ -41,7 +42,8 @@ if __name__ == '__main__':
 
 
             if answer == 2:
-                print("Содержимое папки:\n" + os.listdir(path))
+                dirList(path)
+
 
             if answer == 3:
                 new_dir = input("Введите имя новой папки:")
