@@ -57,3 +57,24 @@
 модуль random: http://docs.python.org/3/library/random.html
 
 """
+#моё видение генерации карточек для лото
+import random
+
+card = []
+stroka = 3
+stolbec = 4  # длинну строки(или же кооличество столбцов) выставляем так, чтобы в сумме с колличеством случайных
+# чисел (5 чисел) для лото, получалось необходимое количество элементов( 9 элементов в строке)
+quantity = 0
+for i in range(stroka):
+    b = []
+    quantity = 0
+    for j in range(stolbec):
+        b.append("[  ]")
+    while quantity < 5:
+        b.insert(random.randint(0, len(b)),
+                 random.randint(1, 90))  # подменяем случаные элементы сгенерированными числами
+        quantity += 1
+    card.append(b)
+for i in card:
+    print(i)
+
